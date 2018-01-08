@@ -1,0 +1,8 @@
+/bin
+/cloud-mysoft-turbine/target
+/cloud-mysoft-api-gateway/target
+/cloud-mysoft-config/target
+/cloud-mysoft-customer/target
+/cloud-mysoft-eureka/target
+/cloud-mysoft-hystrix-dashboard/target
+/cloud-mysoft-provide/target

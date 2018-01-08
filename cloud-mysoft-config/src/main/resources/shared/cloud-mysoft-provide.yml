@@ -1,0 +1,35 @@
+server:
+  port: 8000
+spring:
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:                           # 指定数据源
+#   type: com.alibaba.druid.pool.DruidDataSource		#spring boot1.4不支持type，使用自定义DataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.94.217.138:3306/test?useUnicode=true&characterEncoding=utf8&useSSL=true
+    username: xcg
+    password: 132566
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20	
+    maxWait: 60000	
+    filters: stat
+    minEvictableIdleTimeMillis: 300000		# 配置一个连接在池中最小生存的时间，单位是毫秒
+    poolPreparedStatements: true
+    
+logging:
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+    com.itmuch.youran.persistence: ERROR
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/    # 指定注册中心的地址
+  instance:
+    preferIpAddress: true
