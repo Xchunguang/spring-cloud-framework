@@ -9,9 +9,9 @@ spring:
   datasource:                           # 指定数据源
 #   type: com.alibaba.druid.pool.DruidDataSource		#spring boot1.4不支持type，使用自定义DataSource
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://47.94.217.138:3306/test?useUnicode=true&characterEncoding=utf8&useSSL=true
-    username: xcg
-    password: 132566
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&useSSL=true
+    username: root
+    password: root
     initialSize: 5
     minIdle: 5
     maxActive: 20	
