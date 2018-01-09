@@ -15,7 +15,7 @@
 - Druid 数据源与监控
 
 # 使用方法
-- 若为单机机运行添加host:C:\Windows\System32\drivers\etc\hosts
+- 若为单机运行添加host:C:\Windows\System32\drivers\etc\hosts
 
 		127.0.0.1 slave1 slave2 gateway feign
 	
