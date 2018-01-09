@@ -32,3 +32,54 @@
 - 运行cloud-mysoft-hystrix-dashboard对hystrix提供监控可视化界面，<a href="https://github.com/Xchunguang/spring-cloud-framework/tree/master/cloud-mysoft-hystrix-dashboard">详情</a>
 - 运行cloud-mysoft-turbine监控集群服务，<a href="https://github.com/Xchunguang/spring-cloud-framework/tree/master/cloud-mysoft-turbine">详情</a>
 
+
+# RabbitMQ
+- RabbitMQ window安装和使用
+
+	- 安装<a href="http://www.erlang.org/downloads">Erlang</a>
+	- 安装<a href="http://www.rabbitmq.com/download.html">RabbitMQ</a>
+	- RabbitMQ server安装之后会自动注册成为服务
+	- 注意设置环境变量RABBITMQ_BASE为一个不含中文的路径
+
+- Rabbit管理
+
+	可以通过访问配置文件进行管理，也可以通过web进行管理。通过web进行管理：
+	
+		执行：rabbitmq-plugins enable rabbitmq_management
+
+	重启服务，打开浏览器http://localhost:15672,使用用户名guest密码guest登录，可看到管理界面。
+
+		查看用户：rabbitmqctl.bat list_users
+		创建用户：rabbitmqctl.bat add_user username password
+
+- spring cloud集成RabbitMQ与spring cloud bus
+
+	- 配置总线添加依赖：
+
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-bus-amqp</artifactId>
+			</dependency>
+
+	- 配置文件中添加RibbonMQ配置：
+
+			spring:
+			 cloud:
+			  bus:
+			   trace:
+			    enabled:true
+			 rabbitmq:
+			   host: 10.11.85.21
+			   port: 5672
+			   username: root
+			   password: 123456
+
+	- 启动配置总线：发现控制台输出
+	 
+			Mapped "{[/bus/refresh],methods=[POST]}"
+
+	- 修改配置，访问http://localhost:8888/index.html，点击按钮，实际上就是发送一个post请求到http://localhost:8888/bus/refresh ，在总线上的服务配置都会受到消息并更新
+	- 查看RabbitMQ上的服务：
+
+			访问：http://localhost:15672/#/connections
+			可以查看到当前总线上的链接数和对应ip端口

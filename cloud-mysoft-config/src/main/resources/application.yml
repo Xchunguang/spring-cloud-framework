@@ -4,9 +4,16 @@ spring:
       server:
         native:
           search-locations: classpath:/shared
+    bus:
+     trace:
+      enabled:true
   profiles:
      active: native
-
+  rabbitmq:
+    host: 10.11.85.21
+    port: 5672
+    username: root
+    password: 123456
 server:
   port: 8888
 

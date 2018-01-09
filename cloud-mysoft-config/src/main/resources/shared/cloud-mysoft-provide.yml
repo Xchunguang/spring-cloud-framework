@@ -19,7 +19,11 @@ spring:
     filters: stat
     minEvictableIdleTimeMillis: 300000		# 配置一个连接在池中最小生存的时间，单位是毫秒
     poolPreparedStatements: true
-    
+  rabbitmq:
+   host: 10.11.85.21
+   port: 5672
+   username: root
+   password: 123456
 logging:
   level:
     root: INFO
