@@ -4,8 +4,8 @@
 	<artifactId>cloud-mysoft-customer</artifactId>
 
 	<parent>
-		<groupId>com.itmuch.cloud</groupId>
-		<artifactId>spring-cloud-microservice-study</artifactId>
+		<groupId>com.mysoft</groupId>
+		<artifactId>cloud-mysoft-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<dependencies>

@@ -17,7 +17,6 @@ public class UserController {
   private DiscoveryClient discoveryClient;
   @Autowired
   private UserRepository userRepository;
-
   /**
    * 注：@GetMapping("/{id}")是spring 4.3的新注解等价于：
    * @RequestMapping(value = "/id", method = RequestMethod.GET)
@@ -30,7 +29,7 @@ public class UserController {
     User findOne = this.userRepository.findByUserid(id);
     return findOne;
   }
-  
+
 
  
 

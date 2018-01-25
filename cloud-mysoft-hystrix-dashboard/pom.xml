@@ -3,11 +3,12 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>cloud-mysoft-hystrix-dashboard</artifactId>
 
-	<parent>
-		<groupId>com.itmuch.cloud</groupId>
-		<artifactId>spring-cloud-microservice-study</artifactId>
+  	<parent>
+		<groupId>com.mysoft</groupId>
+		<artifactId>cloud-mysoft-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>

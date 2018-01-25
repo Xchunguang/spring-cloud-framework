@@ -12,6 +12,8 @@ eureka:
   client:
     instance:
      hostname: slave1
+    registerWithEureka: false
+    fetchRegistry: false
     serviceUrl:
       defaultZone: http://slave2:8762/eureka/
 ---

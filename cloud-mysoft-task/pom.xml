@@ -3,11 +3,12 @@
   <artifactId>cloud-mysoft-task</artifactId>
   
   
-	<parent>
-		<groupId>com.itmuch.cloud</groupId>
-		<artifactId>spring-cloud-microservice-study</artifactId>
+  	<parent>
+		<groupId>com.mysoft</groupId>
+		<artifactId>cloud-mysoft-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
+	
 	
 	<dependencies>
 		<!-- 添加Eureka的依赖 -->
@@ -52,6 +53,22 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-task-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
 		</dependency>
 	</dependencies>
 </project>
