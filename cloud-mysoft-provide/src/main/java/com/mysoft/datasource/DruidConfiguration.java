@@ -16,7 +16,7 @@ import com.alibaba.druid.pool.DruidDataSource;
 public class DruidConfiguration{
 
     @Bean
-    @ConfigurationProperties("spring.datasource.*")
+//    @ConfigurationProperties("spring.datasource.*")
     public DruidDataSource dataSource(DataSourceProperties properties) {
         DruidDataSource dataSource = new DruidDataSource();
         dataSource.setDriverClassName(properties.determineDriverClassName());
@@ -31,8 +31,8 @@ public class DruidConfiguration{
             dataSource.setValidationQuery(validationQuery);
         }
         try {
-            //�?启Druid的监控统计功能，mergeStat代替stat表示sql合并,wall表示防御SQL注入攻击
-            dataSource.setFilters("mergeStat,wall,log4j");
+            //�?启Druid的监控统计功能，mergeStat代替stat表示sql合并,wall表示防御SQL注入攻击
+            dataSource.setFilters("mergeStat,wall");
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

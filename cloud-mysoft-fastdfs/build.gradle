@@ -1,0 +1,10 @@
+
+description = ''
+dependencies {
+	compile("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
+	compile("org.springframework.cloud:spring-cloud-starter-config")
+	compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+	compile("org.springframework.boot:spring-boot-devtools")
+    compile group: 'net.oschina.zcx7878', name: 'fastdfs-client-java', version:'1.27.0.0'
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+}

@@ -9,9 +9,9 @@ spring:
   datasource:                           # 指定数据源
 #   type: com.alibaba.druid.pool.DruidDataSource		#spring boot1.4不支持type，使用自定义DataSource
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/ticket?useUnicode=true&characterEncoding=utf8&useSSL=true
-    username: root
-    password: root
+    url: jdbc:mysql://192.168.20.132:3306/excel?useUnicode=true&characterEncoding=utf8&useSSL=true
+    username: xcg
+    password: 132566
     initialSize: 5
     minIdle: 5
     maxActive: 20	
@@ -19,11 +19,6 @@ spring:
     filters: stat
     minEvictableIdleTimeMillis: 300000		# 配置一个连接在池中最小生存的时间，单位是毫秒
     poolPreparedStatements: true
-  rabbitmq:
-   host: 10.11.85.21
-   port: 5672
-   username: root
-   password: 123456
 logging:
   level:
     root: INFO

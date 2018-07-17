@@ -16,5 +16,6 @@ public class EurekaServerApplication {
 			Scanner scan = new Scanner(System.in);
 			String profiles = scan.nextLine();
 			new SpringApplicationBuilder(EurekaServerApplication.class).profiles(profiles).run(args);
+		 
 	 }
 }

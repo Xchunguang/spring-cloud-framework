@@ -4,19 +4,28 @@ spring:
       server:
         native:
           search-locations: classpath:/shared
-    bus:
-     trace:
-      enabled:true
+#    bus:
+#     trace:
+#      enabled:true
   profiles:
      active: native
   rabbitmq:
-    host: 10.11.85.21
+    host: 192.168.20.132
     port: 5672
     username: root
-    password: 123456
+    password: root
 server:
   port: 8888
-
-security:
-  user:
-    password: root
+management:
+  endpoints:
+    web:
+      cors:
+        allow-credentials: true
+        allowed-headers: '*'
+        allowed-methods: '*'
+        allowed-origins: '*'
+        exposed-headers: 'header1,header2'
+        max-age: 1800s
+#security:
+#  user:
+#    password: root

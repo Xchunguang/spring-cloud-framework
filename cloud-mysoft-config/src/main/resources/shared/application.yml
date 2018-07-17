@@ -9,6 +9,12 @@ hystrix:
 ribbon:
   ReadTimeout: 20000
   ConnectTimeout: 20000
+spring:
+  rabbitmq:
+   host: 192.168.20.132
+   port: 5672
+   username: root
+   password: root
   
 eureka:
   client:

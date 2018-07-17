@@ -14,8 +14,6 @@ import com.mysoft.repository.UserRepository;
 @RestController
 public class UserController {
   @Autowired
-  private DiscoveryClient discoveryClient;
-  @Autowired
   private UserRepository userRepository;
   /**
    * 注：@GetMapping("/{id}")是spring 4.3的新注解等价于：
@@ -30,12 +28,4 @@ public class UserController {
     return findOne;
   }
 
-
- 
-
-  @GetMapping("/instance-info")
-  public ServiceInstance showInfo() {
-    ServiceInstance localServiceInstance = this.discoveryClient.getLocalServiceInstance();
-    return localServiceInstance;
-  }
 }

@@ -6,7 +6,7 @@ import javax.servlet.annotation.WebInitParam;
 import com.alibaba.druid.support.http.WebStatFilter;
  
 /**
- * druid过滤�?.
+ * druid过滤
  * @author Administrator
  *
  */

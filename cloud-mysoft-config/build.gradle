@@ -1,0 +1,7 @@
+
+description = ''
+dependencies {
+    compile('org.springframework.cloud:spring-cloud-config-server')
+	compile('org.springframework.cloud:spring-cloud-starter-bus-amqp')
+	compile('org.springframework.boot:spring-boot-starter-actuator')
+}

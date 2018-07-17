@@ -1,0 +1,20 @@
+rootProject.name = 'cloud-mysoft-parent'
+include ':cloud-mysoft-eureka'
+include ':cloud-mysoft-config'
+include ':cloud-mysoft-provide'
+include ':cloud-mysoft-hystrix-dashboard'
+include ':cloud-mysoft-customer'
+include ':cloud-mysoft-turbine'
+include ':cloud-mysoft-api-gateway'
+include ':cloud-mysoft-task'
+include ':cloud-mysoft-fastdfs'
+
+project(':cloud-mysoft-eureka').projectDir = "$rootDir/cloud-mysoft-eureka" as File
+project(':cloud-mysoft-config').projectDir = "$rootDir/cloud-mysoft-config" as File
+project(':cloud-mysoft-provide').projectDir = "$rootDir/cloud-mysoft-provide" as File
+project(':cloud-mysoft-hystrix-dashboard').projectDir = "$rootDir/cloud-mysoft-hystrix-dashboard" as File
+project(':cloud-mysoft-customer').projectDir = "$rootDir/cloud-mysoft-customer" as File
+project(':cloud-mysoft-turbine').projectDir = "$rootDir/cloud-mysoft-turbine" as File
+project(':cloud-mysoft-api-gateway').projectDir = "$rootDir/cloud-mysoft-api-gateway" as File
+project(':cloud-mysoft-task').projectDir = "$rootDir/cloud-mysoft-task" as File
+project(':cloud-mysoft-fastdfs').projectDir = "$rootDir/cloud-mysoft-fastdfs" as File
